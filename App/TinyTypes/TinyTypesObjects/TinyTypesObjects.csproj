@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Tiny types in C# 
+</Description>
+    <PackageProjectUrl>https://github.com/ignatandrei/tinyTypes</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ignatandrei/tinyTypes</RepositoryUrl>
+    <PackageTags>C#;TinyTypes</PackageTags>
+  </PropertyGroup>
+
+</Project>
