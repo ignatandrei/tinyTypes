@@ -73,7 +73,7 @@ namespace TinyTypesObjects
         {
             if (ReferenceEquals(t1, t2))
                 return true;
-            var def = default(T);
+            //var def = default(T);
             
             return t1.Equals(t2);
 

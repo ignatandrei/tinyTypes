@@ -12,6 +12,11 @@ namespace TinyTypesTest
             string s = "http://msprogrammer.serviciipeweb.ro";
             TinyType<string> tt = s;
             Assert.AreEqual(s, (string)tt);
+
+            int nr = 7;
+            TinyType<int> tt1 = nr;
+
+            Assert.AreEqual(nr, (int)tt1);
         }
         [TestMethod]
         public void TestConvertNull()
