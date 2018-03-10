@@ -5,13 +5,17 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Tiny types in C# 
 GitHub: https://github.com/ignatandrei/tinyTypes
-Blog About: http://msprogrammer.serviciipeweb.ro/category/tinytypes/</Description>
+Blog About: http://msprogrammer.serviciipeweb.ro/category/tinytypes/
+NuGet: https://www.nuget.org/packages/TinyTypesObjects/</Description>
     <PackageProjectUrl>http://msprogrammer.serviciipeweb.ro/category/tinytypes/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ignatandrei/tinyTypes</RepositoryUrl>
     <PackageTags>C#;TinyTypes</PackageTags>
     <Copyright>MIT</Copyright>
     <PackageLicenseUrl>https://github.com/ignatandrei/tinyTypes</PackageLicenseUrl>
-    <PackageReleaseNotes>Version 1 - just definition</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 1 .0.1.0 - just definition + equals</PackageReleaseNotes>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
