@@ -25,6 +25,42 @@ namespace TinyTypesTest
             #endregion
         }
         [TestMethod]
+        public void TestSimpleStringWithNull()
+        {
+            #region arrange
+            string s = null;
+            #endregion
+            #region act
+            TinyType<string> tt1 = s;
+            TinyType<string> tt2 = null;
+            #endregion
+            #region assert
+            Assert.IsFalse(tt1.Equals(tt2));
+            Assert.AreNotEqual(tt1, tt2);
+            Assert.AreEqual<string>(tt1, tt2);
+            Assert.AreNotEqual<TinyType<string>>(tt1, tt2);
+            Assert.AreEqual<string>(s, tt2);
+            #endregion
+        }
+        [TestMethod]
+        public void TestSimpleStringNull()
+        {
+            #region arrange
+            string s = null;
+            #endregion
+            #region act
+            TinyType<string> tt1 = s;
+            TinyType<string> tt2 = s;
+            #endregion
+            #region assert
+            Assert.IsTrue(tt1.Equals(tt2));
+            Assert.AreEqual(tt1, tt2);
+            Assert.AreEqual<string>(tt1, tt2);
+            Assert.AreEqual<TinyType<string>>(tt1, tt2);
+            Assert.AreEqual<string>(s, tt2);
+            #endregion
+        }
+        [TestMethod]
         public void TestSimpleIntEquals()
         {
             #region arrange

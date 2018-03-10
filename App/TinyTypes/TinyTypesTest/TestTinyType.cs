@@ -14,6 +14,13 @@ namespace TinyTypesTest
             Assert.AreEqual(s, (string)tt);
         }
         [TestMethod]
+        public void TestConvertNull()
+        {
+            string s = null;
+            TinyType<string> tt = s;
+            Assert.AreEqual(s, (string)tt);
+        }
+        [TestMethod]
         public void TestBehaviour()
         {
             #region arrange + act

@@ -2,7 +2,7 @@
 
 namespace TinyTypesObjects
 {
-    public class TinyType<T>:IEquatable<T>
+    public class TinyType<T>:IEquatable<T>, IEquatable<TinyType<T>>
     {
         //#region comparable null object
         //static T NullObject = new TinyType<T>();
@@ -30,6 +30,9 @@ namespace TinyTypesObjects
         }
         public static implicit operator T(TinyType<T> arg)
         {
+            if (arg == null)
+                return default(T);
+
             return arg.t;
         }
         public static implicit operator TinyType<T>(T arg)
@@ -48,40 +51,55 @@ namespace TinyTypesObjects
         }
         public override bool Equals(object obj)
         {
-            var def = default(T);
-            try
+            
+            if (obj is T)
             {
                 var val = (T)obj;
-
-                if (val == null && this.t.Equals(def))
-                    return true;
-                if (val.Equals(this.t))
-                    return true;
+                
+                return AreEqual(val,this.t);
             }
-            catch
-            {
-                //do not log, maybe is not T
-            }
-            try
+            if (obj is TinyType<T>)
             {
                 var tt = (TinyType<T>)obj;
+                if (tt == null)
+                    return false;
 
                 return this.Equals(tt);
             }
-            catch
-            {
-                //do not log, maybe is not T
-            }
+
             return false;
         }
-        public override int GetHashCode()
+        bool AreEqual(T t1, T t2)
+        {
+            if (ReferenceEquals(t1, t2))
+                return true;
+            var def = default(T);
+            
+            return t1.Equals(t2);
+
+
+        }
+    public override int GetHashCode()
         {
             return t.GetHashCode();
         }
         public override string ToString()
         {
-            return t.ToString();
+            return t?.ToString();
         }
+
+        public bool Equals(TinyType<T> other)
+        {
+            if (ReferenceEquals(null, other))
+                return false;
+            if (ReferenceEquals(this, other))
+                return true;
+
+            
+            return AreEqual(this.t, other.t);
+            
+        }
+
         #endregion
     }
 }
