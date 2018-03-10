@@ -100,7 +100,7 @@ class TestConstructor
         }
 ```
 
-#### Equals
+#### Equals or ==
 
 Each tiny type object has an `equals` method, which you can use to compare it by value:
 
@@ -112,3 +112,15 @@ int nr = 7;
             Assert.AreEqual(tt1, tt2);
             Assert.IsTrue(tt1 == tt2);
 ```
+
+
+#### Links:
+
+
+GitHub: https://github.com/ignatandrei/tinyTypes
+
+
+Blog About: http://msprogrammer.serviciipeweb.ro/category/tinytypes/
+
+
+NuGet: https://www.nuget.org/packages/TinyTypesObjects/
