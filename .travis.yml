@@ -1,0 +1,7 @@
+language: csharp
+dotnet: 2.1.4
+install:
+- dotnet restore App/TinyTypes/TinyTypes.sln
+script:
+- dotnet build App/TinyTypes/TinyTypes.sln
+- dotnet test App/TinyTypes/TinyTypesTest/TinyTypesTest.csproj
