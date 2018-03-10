@@ -1,10 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TinyTypesObjects;
 
 namespace TinyTypesTest
 {
     [TestClass]
     public class TestTinyType
     {
+        [TestMethod]
+        public void TestConvert()
+        {
+            string s = "http://msprogrammer.serviciipeweb.ro";
+            TinyType<string> tt = s;
+            Assert.AreEqual(s, (string)tt);
+        }
         [TestMethod]
         public void TestBehaviour()
         {

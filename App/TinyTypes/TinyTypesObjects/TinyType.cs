@@ -21,9 +21,21 @@ namespace TinyTypesObjects
         {
 
         }
+        public T value
+        {
+            get
+            {
+                return this.t;
+            }
+        }
         public static implicit operator T(TinyType<T> arg)
         {
             return arg.t;
+        }
+        public static implicit operator TinyType<T>(T arg)
+        {
+            //if arg==default
+            return new TinyType<T>(arg);
         }
         
 

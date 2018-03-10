@@ -4,10 +4,14 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Tiny types in C# 
-</Description>
-    <PackageProjectUrl>https://github.com/ignatandrei/tinyTypes</PackageProjectUrl>
+GitHub: https://github.com/ignatandrei/tinyTypes
+Blog About: http://msprogrammer.serviciipeweb.ro/category/tinytypes/</Description>
+    <PackageProjectUrl>http://msprogrammer.serviciipeweb.ro/category/tinytypes/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ignatandrei/tinyTypes</RepositoryUrl>
     <PackageTags>C#;TinyTypes</PackageTags>
+    <Copyright>MIT</Copyright>
+    <PackageLicenseUrl>https://github.com/ignatandrei/tinyTypes</PackageLicenseUrl>
+    <PackageReleaseNotes>Version 1 - just definition</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
